@@ -13,7 +13,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="background" class="absolute fullH fullW sizeCover paddG" onclick="jump()">
+    <div id="background" class="absolute fullH fullW sizeCover paddG">
+
       <div id="startScreen" class="flex vert center margG paddG">
         <h1 id="gameTitle" class="">The OffLine DinoGame</h1>
         <div class="flex vert center margG paddG">
@@ -21,9 +22,11 @@
           <h3 class="">- Use a Barra de Espaços no teclado</h3>
           <h3 class="">- Toque ou Clique em qualquer lugar da Tela</h3>
         </div>
+      </div>
+
         <div id="menu" class="absolute fullH flex vert around margG paddG">
-          <button id="startBtn" class="margG paddG flex center" onclick="reload()">Night<br>Mode</button>
-          <button id="nightBtn" class="margG paddG flex center" onclick="reload()">Start</button>
+          <button id="nightBtn" class="margG paddG flex center" onclick="nightRun()">Night<br>Mode</button>
+          <button id="startBtn" class="margG paddG flex center" onclick="reload()">Start</button>
         </div>
     <!--
   

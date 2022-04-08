@@ -1,10 +1,20 @@
+const BACKGROUND = document.getElementById('background');
+
+function nightRun(){
+  BACKGROUND.classList.toggle("night");
+}
+
+function reload(){
+  document.location.reload();
+}
+
+/*
 const DINO = document.querySelector('.dino');
 let screenWidth = window.screen.width
 
-const BACKGROUND = document.querySelector('.background');
+
 let SCORE = document.querySelector('.score');
 let points = 0;
-
 
 let gameOn = false;
 let isJumping = false;
@@ -13,11 +23,6 @@ let positionF = 0;
 
 function gameStart(){
   
-}
-
-
-function reload(){
-  document.location.reload();
 }
 
 
@@ -115,6 +120,6 @@ function jump() {
 createCactus(); 
 
 
-*/
-document.addEventListener('keydown', handleKeyUp);
 
+document.addEventListener('keydown', handleKeyUp);
+*/
