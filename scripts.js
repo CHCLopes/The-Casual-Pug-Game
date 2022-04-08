@@ -13,7 +13,6 @@ if(window.addEventListener('orientationchange')){
   MENU.classList.toggle("fullW");
   BACKGROUND.classList.toggle("columnReverse");
   STARTSCREEN.classList.toggle("absolute")
-
 }
 
 function nightRun(){
