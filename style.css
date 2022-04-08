@@ -78,6 +78,10 @@ font-family: 'Press Start 2P', cursive;
   background-size: cover;
 }
 
+.night{
+  filter: invert(100%);
+}
+
 #background {
   bottom: 0;
   background-image: url('./imgs/background.png');
@@ -99,7 +103,7 @@ font-family: 'Press Start 2P', cursive;
 }
 
 #menu{
-  background-color: darkslategray;
+  background-color: lightgray;
   width:auto;
   right: 0;
   top:0;
@@ -123,7 +127,7 @@ button {
   border: .2rem black solid;
   border-radius: 50%;
   width: auto;
-  height: 6rem;
+  height: 15%;
   font-size: 1em;
   font-family: 'Press Start 2P', cursive;
 }
