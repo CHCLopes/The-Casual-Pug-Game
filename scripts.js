@@ -5,7 +5,10 @@ let screenWidth = window.screen.width
 
 if(screenWidth < 900){
   MENU.classList.toggle("vert");
-  MENU.classList.toggle("hor")
+  MENU.classList.toggle("hor");
+  MENU.classList.toggle("fullH");
+  MENU.classList.toggle("fullW");
+  BACKGROUND.classList.toggle("rowReverse");
 }
 
 function nightRun(){
