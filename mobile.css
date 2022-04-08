@@ -1,5 +1,4 @@
-@media screen and (max-device-width: 720px) {
-
+@media screen and (max-width: 900px) {
 
   h1 {
     font-size: 1em;
@@ -22,20 +21,3 @@
 
 }
 
-@media screen and (orientation) {
-  h1 {
-    font-size: 1rem;
-  }
-
-  h3 {
-    font-size: .5em;
-  }
-
-  button {
-    border: .1rem;
-    width: auto;
-    height: 15%;
-    font-size: .5em;
-  }
-
-}
