@@ -4,9 +4,11 @@ const STARTSCREEN = document.getElementById('startScreen')
 const SCREENWIDTH = window.screen.width;
 const SCREENHEIGHT = window.screen.height;
 
-let mediaQuerie = window.matchMedia("(orientation: portrait)");
+let jmediaQuerie = window.matchMedia("(orientation: portrait)");
 
-mediaQuerie.addEventListener(handleOrientationChange, portrait);
+jmediaQuerie.addEventListener(handleOrientationChange, () => setTimeout(function(){
+  handleOrientationChange(mediaQuerie);
+}, 1000));
 
 function handleOrientationChange(mediaQuerie) {
   if (mediaQuerie.matches) { 
