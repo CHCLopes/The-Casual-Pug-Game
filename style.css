@@ -26,20 +26,20 @@ padding: 0;
   margin: .5rem;
 }
 
-.paddG{
-  padding: .5rem;
-}
-
 .margM{
   margin: .3rem;
 }
 
-.paddM{
-  padding: .3rem;
-}
-
 .margP{
   margin: .1rem;
+}
+
+.paddG{
+  padding: .5rem;
+}
+
+.paddM{
+  padding: .3rem;
 }
 
 .paddP{
