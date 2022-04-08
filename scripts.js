@@ -11,6 +11,7 @@ if(portrait){
   MENU.classList.toggle("vert");
   MENU.classList.toggle("hor");
   MENU.classList.toggle("fullW");
+  MENU.classList.toggle("fullH")
   BACKGROUND.classList.toggle("columnReverse");
   STARTSCREEN.classList.toggle("absolute")
 }
