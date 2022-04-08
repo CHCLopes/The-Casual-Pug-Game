@@ -17,10 +17,12 @@ function handleOrientationChange(mediaQuerie) {
     BACKGROUND.classList.remove("vert");} 
   else { 
     MENU.classList.add("fullH");
-MENU.classList.remove("fullW");
-MENU.classList.add("vert");
-MENU.classList.remove("hor");
-BACKGROUND.classList.add("vert");} }
+    MENU.classList.remove("fullW");
+    MENU.classList.add("vert");
+    MENU.classList.remove("hor");
+    BACKGROUND.classList.add("vert");
+  } 
+}
 
 
 function nightRun(){
