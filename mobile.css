@@ -1,11 +1,10 @@
 @media(max-width: 900px) {
-  html{
-    width: 100vw;
-    height: 100vh;
-  }
-
   h1 {
     font-size: 1rem;
+  }
+
+  h3 {
+    font-size: .7rem;
   }
 
   button {
@@ -18,13 +17,12 @@
 }
 
 @media(max-height: 900px) {
-  html{
-    width: 100vw;
-    height: 100vh;
-  }
-
   h1 {
     font-size: 1rem;
+  }
+
+  h3 {
+    font-size: .7rem;
   }
 
   button {
