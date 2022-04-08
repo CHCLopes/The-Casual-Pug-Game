@@ -4,7 +4,7 @@ const STARTSCREEN = document.getElementById('startScreen')
 
 let screenWidth = window.screen.width
 
-if(window.screen.orientation('landscape')){
+if(window.screen.width > window.screen.height){
   MENU.classList.toggle("vert");
   MENU.classList.toggle("hor");
   MENU.classList.toggle("fullH");
