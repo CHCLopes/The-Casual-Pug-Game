@@ -2,6 +2,8 @@ html{
 width: 100%;
 height: 100%;
 font-family: 'Press Start 2P', cursive;
+margin: 0;
+padding: 0;
 }
 
 .fullScreenW{
@@ -91,11 +93,10 @@ font-family: 'Press Start 2P', cursive;
 }
 
 #background {
-  bottom: 1.2%;
+  bottom: 0;
   background-image: url('./imgs/background.png');
   background-repeat: repeat-x;
   justify-content: space-between;
-  width: 98.2%;
 }
 
 .backgroundAnimation{
