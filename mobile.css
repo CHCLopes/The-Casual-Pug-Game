@@ -1,5 +1,5 @@
-@media(max-width: 900px) {
-  
+@media screen and (max-device-width: 720px) {
+
 
   h1 {
     font-size: 1em;
@@ -22,7 +22,7 @@
 
 }
 
-@media(max-height: 900px) {
+@media screen and (orientation) {
   h1 {
     font-size: 1rem;
   }
