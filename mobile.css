@@ -1,4 +1,4 @@
-@media (max-width: 900px) {
+@media (orientation: portrait) {
 
   h1 {
     font-size: 1em;
