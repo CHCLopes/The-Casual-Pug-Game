@@ -1,0 +1,265 @@
+@media(max-width: 900px) {
+  html{
+    width: 100vw;
+    height: 100vh;
+  }
+  body{
+    font-size: .6em;
+    }
+
+  .background {
+    animation: slideright 3000s infinite linear;
+  }
+
+  .title{
+    margin: .5rem;
+    padding: 1rem;
+    font-size: 1.2rem;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    justify-self: flex-start;
+  }
+
+  #title{
+    font-size: .9rem;
+    color: darkgray;
+    padding:1rem ;
+    width: 90%;
+  }
+
+  .instruction{
+    font-size: .6em;
+    text-justify:distribute-all-lines
+  }
+
+  .score{
+    font-size: 1.5em;
+    margin: 2rem;
+  }
+
+  .button{
+    display: flex;
+    border: 1px black solid;
+    border-radius: 30rem;
+    margin: 0.2rem;
+    padding: 0.5rem;
+    justify-content: center;
+    writing-mode: vertical-lr;
+    width: 1rem;
+    height: 5rem;
+  }
+
+  .menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+    .dino{
+    width: 15%;
+    height: 9%;
+  }
+
+  .animaDino {
+    animation:play2 .6s steps(6) infinite;
+    -webkit-animation: play2 .6s steps(6) infinite;
+    -moz-animation: play2 .6s steps(6) infinite;
+    -ms-animation: play2 .6s steps(6) infinite;
+    -o-animation: play2 .6s steps(6) infinite;
+  }
+    
+  @keyframes play2 {
+    from {background-position: 0vw;}
+    to {background-position: -90vw;}
+  }
+  
+  @-webkit-keyframes play2 {
+    from {background-position: 0vw;}
+    to {background-position: -90vw;}
+  }
+  
+  @-moz-keyframes play2 {
+    from {background-position: 0vw;}
+    to {background-position: -90vw;}
+  }
+  
+  @-ms-keyframes play2 {
+    from {background-position: 0vw;}
+    to {background-position: -90vw;}
+  }
+  
+  @-o-keyframes play2 {
+    from {background-position: 0vw;}
+    to {background-position: -90vw;}
+  }
+
+  .cactus{
+    width: 6%;
+    height: 6%;
+  }
+
+  .restart{
+    writing-mode:horizontal-tb;
+    position:absolute;
+    top: 0;
+    left: 39%;
+    display: flex;
+    width: auto;
+    height: auto;
+  }
+
+  .gameOver{
+    font-size: 2em;
+    position:absolute;
+    top: 20%;
+    left: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+
+/*horizontal screen*/
+
+@media(max-height: 900px) {
+  html{
+    width: 100vw;
+    height: 100vh;
+  }
+  body{
+    font-size: .6em;
+    }
+
+  .background {
+    animation: slideright 30s infinite linear;
+  }
+
+  .title{
+    margin: .2rem;
+    padding: .5rem;
+    font-size: 1rem;
+    flex-direction: row;
+    width: auto;
+    height: auto;
+    justify-self: flex-start;
+    display:flex
+  }
+
+  #title{
+    font-size: .9rem;
+    color: darkgray;
+    padding:.3rem ;
+    width: auto;
+    height: auto;
+  }
+
+  .instruction{
+    font-size: 1em;
+    text-justify:distribute-all-lines;
+    display:flex;
+    flex-direction: column;
+  }
+
+  .textV{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .textH{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
+
+  .score{
+    font-size: 1.5em;
+    margin: 2rem;
+  }
+
+  .button{
+    display: flex;
+    border: 1px black solid;
+    border-radius: 30rem;
+    margin: 0.2rem;
+    padding: 0.5rem;
+    justify-content: center;
+    writing-mode: vertical-lr;
+    width: 1rem;
+    height: 5rem;
+  }
+
+  .restart{
+    left: 50%;
+    position:absolute;
+    top: 0;
+    display: flex;
+  
+  }
+
+  .dino{
+    width: 5.5%;
+    height: 15%;
+    
+  }
+
+  .animaDino {
+    animation:play2 1s steps(6) infinite;
+    -webkit-animation: play2 1s steps(6) infinite;
+    -moz-animation: play2 1s steps(6) infinite;
+    -ms-animation: play2 1s steps(6) infinite;
+    -o-animation: play2 1s steps(6) infinite;
+  }
+    
+  @keyframes play2 {
+    from {background-position: 0vw;}
+    to {background-position: -33vw;}
+  }
+  
+  @-webkit-keyframes play2 {
+    from {background-position: 0vw;}
+    to {background-position: -90vw;}
+  }
+  
+  @-moz-keyframes play2 {
+    from {background-position: 0vw;}
+    to {background-position: -90vw;}
+  }
+  
+  @-ms-keyframes play2 {
+    from {background-position: 0vw;}
+    to {background-position: -90vw;}
+  }
+  
+  @-o-keyframes play2 {
+    from {background-position: 0vw;}
+    to {background-position: -90vw;}
+  }
+
+  .cactus{
+    width: 6%;
+    height: 6%;
+  }
+
+  .restart{
+    writing-mode:horizontal-tb;
+    position:absolute;
+    top: 0;
+    left: 39%;
+    display: flex;
+    width: auto;
+    height: auto;
+  }
+
+  .gameOver{
+    font-size: 2em;
+    position:absolute;
+    top: 20%;
+    left: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

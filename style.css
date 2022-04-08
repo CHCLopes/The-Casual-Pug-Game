@@ -1,0 +1,129 @@
+html{
+width: 100%;
+height: 100%;
+font-family: 'Press Start 2P', cursive;
+}
+
+.fullScreenW{
+  width: 100vw;
+}
+
+.fullScreenH{
+  height: 100vh;
+}
+
+.fullW{
+  width:100%;
+}
+
+.fullH{
+  height:100%;
+}
+
+.margG{
+  margin: .5rem;
+}
+
+.paddG{
+  padding: .5rem;
+}
+
+.margM{
+  margin: .3rem;
+}
+
+.paddM{
+  padding: .3rem;
+}
+
+.margP{
+  margin: .1rem;
+}
+
+.paddP{
+  padding: .1rem;
+}
+
+.flex{
+  display: flex;
+}
+
+.center{
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+}
+
+.between{
+  justify-content: space-between;
+}
+
+.around{
+  justify-content: space-around;
+}
+
+.hor{
+  flex-direction: row;
+}
+
+.vert{
+  flex-direction: column;
+}
+
+.absolute {
+  position:absolute;
+}
+
+.sizeCover{
+  background-size: cover;
+}
+
+#background {
+  bottom: 0;
+  background-image: url('./imgs/background.png');
+  background-repeat: repeat-x;
+  justify-content: space-between;
+}
+
+.backgroundAnimation{
+  animation: slideright 500s infinite linear;
+}
+
+@keyframes slideright {
+  from{
+    background-position: -70000%;
+  }
+  to{
+    background-position: 0;
+  }
+}
+
+#menu{
+  background-color: darkslategray;
+  width:auto;
+  right: 0;
+  top:0;
+  
+}
+
+h1 {
+  font-size: 3rem;
+  color: darkgray;
+}
+
+
+.textAnimation{
+  animation: slideright 500s infinite linear;
+}
+
+button {
+  display: flex;
+  color: black;
+  background-color: darkgray;
+  border: .2rem black solid;
+  border-radius: 50%;
+  width: auto;
+  height: 6rem;
+  font-size: 1em;
+  font-family: 'Press Start 2P', cursive;
+}
