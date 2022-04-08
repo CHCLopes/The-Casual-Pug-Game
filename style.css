@@ -86,6 +86,10 @@ font-family: 'Press Start 2P', cursive;
   flex-direction: row-reverse;
 }
 
+.columnReverse{
+  flex-direction: column-reverse;
+}
+
 #background {
   bottom: 0;
   background-image: url('./imgs/background.png');

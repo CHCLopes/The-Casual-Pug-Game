@@ -8,7 +8,7 @@ if(screenWidth < 900){
   MENU.classList.toggle("hor");
   MENU.classList.toggle("fullH");
   MENU.classList.toggle("fullW");
-  BACKGROUND.classList.toggle("rowReverse");
+  BACKGROUND.classList.toggle("columnReverse");
 }
 
 function nightRun(){
