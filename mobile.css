@@ -17,5 +17,23 @@
 
 }
 
+@media (max-height: 720px) and (orientation: portrait) {
+
+  h1 {
+    font-size: 1em;
+  }
+
+  h3 {
+    font-size: .5em;
+  }
+
+    button {
+    border: .1rem;
+    width: auto;
+    height: 15%;
+    font-size: .5em;
+  }
+
+}
 
 
