@@ -25,7 +25,7 @@
   }
 }
 
-@media (max-width: 700px) and (orientation: landscape) {
+@media (max-height: 700px) and (orientation: landscape) {
 
   h1 {
     font-size: 1em;
