@@ -10,6 +10,7 @@
 
   #menu{
     top:0;
+    width: 100%;
   }
 
   button {
@@ -20,9 +21,8 @@
   }
 
   #startScreen{
-    top: 30%;
+    top: 20%;
   }
-
 }
 
 @media (max-width: 700px) and (orientation: landscape) {
