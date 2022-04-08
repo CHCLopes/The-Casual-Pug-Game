@@ -1,9 +1,6 @@
 html{
-width: 100%;
-height: 100%;
 font-family: 'Press Start 2P', cursive;
-margin: 0;
-padding: 0;
+display: flex;
 }
 
 .fullScreenW{
@@ -93,10 +90,11 @@ padding: 0;
 }
 
 #background {
-  bottom: 0;
+  top: auto;
   background-image: url('./imgs/background.png');
   background-repeat: repeat-x;
-  justify-content: space-between;
+  background-size: cover;
+  
 }
 
 .backgroundAnimation{
@@ -114,26 +112,27 @@ padding: 0;
 
 #menu{
   background-color: lightgray;
-  width:auto;
-  right: 0;
+  right:0;
   top:0;
-  
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 2.5em;
   color: darkgray;
+}
+
+h3 {
+  font-size: 1em;
 }
 
 
 button {
-  display: flex;
   color: black;
   background-color: darkgray;
   border: .2rem black solid;
-  border-radius: 50%;
+  border-radius: 10%;
   width: auto;
-  height: 15%;
+  height: auto;
   font-size: 1em;
   font-family: 'Press Start 2P', cursive;
 }

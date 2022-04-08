@@ -3,17 +3,7 @@ const MENU = document.getElementById('menu');
 const STARTSCREEN = document.getElementById('startScreen')
 let portrait = false
 
-if(window.screen.width < window.screen.height){
-    !portrait;
-}
 
-if(portrait){
-  MENU.classList.remove("vert");
-  MENU.classList.toggle("hor");
-  MENU.classList.toggle("fullW");
-  BACKGROUND.classList.toggle("columnReverse");
-  STARTSCREEN.classList.toggle("absolute");
-}
 
 function nightRun(){
   BACKGROUND.classList.toggle("night");
