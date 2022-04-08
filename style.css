@@ -116,10 +116,6 @@ h1 {
 }
 
 
-.textAnimation{
-  animation: slideright 500s infinite linear;
-}
-
 button {
   display: flex;
   color: black;
