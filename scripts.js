@@ -4,7 +4,9 @@ const STARTSCREEN = document.getElementById('startScreen')
 
 let screenWidth = window.screen.width
 
-if(screenWidth < 700){
+window.addEventListener('orientationchange', function(){ // faça alguma coisa });
+
+if(window.addEventListener('orientationchange')){
   MENU.classList.toggle("vert");
   MENU.classList.toggle("hor");
   MENU.classList.toggle("fullH");
