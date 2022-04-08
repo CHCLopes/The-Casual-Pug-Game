@@ -1,4 +1,12 @@
 const BACKGROUND = document.getElementById('background');
+const MENU = document.getElementById('menu');
+
+let screenWidth = window.screen.width
+
+if(screenWidth < 900){
+  MENU.classList.toggle("vert");
+  MENU.classList.toggle("hor")
+}
 
 function nightRun(){
   BACKGROUND.classList.toggle("night");
@@ -10,7 +18,7 @@ function reload(){
 
 /*
 const DINO = document.querySelector('.dino');
-let screenWidth = window.screen.width
+
 
 
 let SCORE = document.querySelector('.score');
