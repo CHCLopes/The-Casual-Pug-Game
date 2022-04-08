@@ -4,7 +4,7 @@ const STARTSCREEN = document.getElementById('startScreen')
 
 let screenWidth = window.screen.width
 
-if(screenWidth < 900){
+if(screenWidth < 700){
   MENU.classList.toggle("vert");
   MENU.classList.toggle("hor");
   MENU.classList.toggle("fullH");
