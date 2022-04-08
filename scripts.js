@@ -1,5 +1,6 @@
 const BACKGROUND = document.getElementById('background');
 const MENU = document.getElementById('menu');
+const STARTSCREEN = document.getElementById('startScreen')
 
 let screenWidth = window.screen.width
 
@@ -9,6 +10,8 @@ if(screenWidth < 900){
   MENU.classList.toggle("fullH");
   MENU.classList.toggle("fullW");
   BACKGROUND.classList.toggle("columnReverse");
+  STARTSCREEN.classList.toggle("absolute")
+
 }
 
 function nightRun(){
