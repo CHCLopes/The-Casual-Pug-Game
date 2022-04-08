@@ -10,7 +10,7 @@ if(SCREENWIDTH < SCREENHEIGHT) {
   MENU.classList.toggle("vert");
   MENU.classList.toggle("hor");
   BACKGROUND.classList.toggle("vert");
-} else {
+} else if {
   MENU.classList.toggle("fullH");
   MENU.classList.toggle("fullW");
   MENU.classList.toggle("vert");
