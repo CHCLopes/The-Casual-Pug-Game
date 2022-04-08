@@ -8,9 +8,9 @@ if(window.screen.width < window.screen.height){
 }
 
 if(portrait){
-  MENU.classList.toggle("vert");
+  MENU.classList.remove("vert");
   MENU.classList.toggle("hor");
-  MENU.classList.toggle("fullH");
+  MENU.classList.remove("fullH");
   MENU.classList.toggle("fullW");
   BACKGROUND.classList.toggle("columnReverse");
   STARTSCREEN.classList.toggle("absolute");
