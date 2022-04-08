@@ -4,22 +4,19 @@ const STARTSCREEN = document.getElementById('startScreen')
 const SCREENWIDTH = window.screen.width;
 const SCREENHEIGHT = window.screen.height;
 
-if(SCREENWIDTH < SCREENHEIGHT) {
-  MENU.classList.toggle("fullH");
-  MENU.classList.toggle("fullW");
-  MENU.classList.toggle("vert");
-  MENU.classList.toggle("hor");
-  BACKGROUND.classList.toggle("vert");
-} else if {
-  MENU.classList.toggle("fullH");
-  MENU.classList.toggle("fullW");
-  MENU.classList.toggle("vert");
-  MENU.classList.toggle("hor");
-  BACKGROUND.classList.toggle("vert");
-}
+let mediaQuerie = window.matchMedia("(orientation: portrait)");
 
+mediaQuerie.addEventListener(handleOrientationChange);
 
-
+function handleOrientationChange(mediaQuerie) { if (mediaQuerie.matches) { MENU.classList.toggle("fullH");
+MENU.classList.toggle("fullW");
+MENU.classList.toggle("vert");
+MENU.classList.toggle("hor");
+BACKGROUND.classList.toggle("vert");} else { MENU.classList.toggle("fullH");
+MENU.classList.toggle("fullW");
+MENU.classList.toggle("vert");
+MENU.classList.toggle("hor");
+BACKGROUND.classList.toggle("vert");} }
 
 
 function nightRun(){
