@@ -6,7 +6,7 @@ const SCREENHEIGHT = window.screen.height;
 
 let mediaQuerie = window.matchMedia("(orientation: portrait)");
 
-mediaQuerie.addEventListener(handleOrientationChange);
+mediaQuerie.addEventListener(handleOrientationChange, 'portrait');
 
 function handleOrientationChange(mediaQuerie) {
   if (mediaQuerie.matches) { 
