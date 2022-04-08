@@ -1,10 +1,13 @@
 const BACKGROUND = document.getElementById('background');
 const MENU = document.getElementById('menu');
 const STARTSCREEN = document.getElementById('startScreen')
-
-let screenWidth = window.screen.width
+let portrait = false
 
 if(window.screen.width < window.screen.height){
+    !portrait;
+}
+
+if(portrait){
   MENU.classList.toggle("vert");
   MENU.classList.toggle("hor");
   MENU.classList.toggle("fullH");
