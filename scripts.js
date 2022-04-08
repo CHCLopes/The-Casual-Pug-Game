@@ -4,11 +4,10 @@ const STARTSCREEN = document.getElementById('startScreen')
 
 let screenWidth = window.screen.width
 
-if(window.addEventListener('orientationchange')){
+if(window.screen.orientation('landscape')){
   MENU.classList.toggle("vert");
   MENU.classList.toggle("hor");
   MENU.classList.toggle("fullH");
-  MENU.classList.toggle("fullW");
   BACKGROUND.classList.toggle("columnReverse");
   STARTSCREEN.classList.toggle("absolute")
 }
