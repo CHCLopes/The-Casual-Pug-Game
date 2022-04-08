@@ -4,29 +4,6 @@ const STARTSCREEN = document.getElementById('startScreen')
 const SCREENWIDTH = window.screen.width;
 const SCREENHEIGHT = window.screen.height;
 
-let jmediaQuerie = window.matchMedia("(orientation: portrait)");
-
-jmediaQuerie.addEventListener(handleOrientationChange, () => setTimeout(function(){
-  handleOrientationChange(mediaQuerie);
-}, 1000));
-
-function handleOrientationChange(mediaQuerie) {
-  if (mediaQuerie.matches) { 
-    MENU.classList.remove("fullH");
-    MENU.classList.add("fullW");
-    MENU.classList.remove("vert");
-    MENU.classList.add("hor");
-    BACKGROUND.classList.remove("vert");} 
-  else { 
-    MENU.classList.add("fullH");
-    MENU.classList.remove("fullW");
-    MENU.classList.add("vert");
-    MENU.classList.remove("hor");
-    BACKGROUND.classList.add("vert");
-  } 
-}
-
-
 function nightRun(){
   BACKGROUND.classList.toggle("night");
 }

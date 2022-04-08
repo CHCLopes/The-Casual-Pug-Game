@@ -112,8 +112,7 @@ display: flex;
 
 #menu{
   background-color: lightgray;
-  right:0;
-  top:0;
+  
 }
 
 h1 {
@@ -131,8 +130,6 @@ button {
   background-color: darkgray;
   border: .2rem black solid;
   border-radius: 10%;
-  width: auto;
-  height: auto;
   font-size: 1em;
   font-family: 'Press Start 2P', cursive;
 }
