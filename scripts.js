@@ -3,7 +3,14 @@ const MENU = document.getElementById('menu');
 const STARTBTN = document.getElementById('startBtn');
 const STARTSCREEN = document.getElementById('startScreen');
 
+const CLOCK = document.getElementById('clock')
+const HORA = document.getElementById('hr');
+const MINUTO = document.getElementById('mn');
+const SEGUNDO = document.getElementById('sg');
+const DATA = document.getElementById('dt');
+
 let gameOn = false;
+let points = 0;
 
 function nightRun(){
   BACKGROUND.classList.toggle("night");
@@ -12,6 +19,96 @@ function nightRun(){
 function reload(){
   document.location.reload();
 }
+
+function Clock(){
+  let clockInterval = setInterval(() =>{
+    let agora = new Date();
+
+    let hora = agora.getHours();
+    let minuto = agora.getMinutes();
+    let segundo = agora.getSeconds();
+  
+    let strHora = new String(hora);
+    let strMinuto = new String(minuto);
+    let strSegundo = new String(segundo);
+  
+    if (strHora.length == 1) {
+      hora = "0" + hora;
+    }
+    if (strMinuto.length == 1) {
+      minuto = "0" + minuto;
+    }
+    if (strSegundo.length == 1) {
+      segundo = "0" + segundo;
+    }
+  
+    HORA.innerHTML = hora;
+    MINUTO.innerHTML = minuto;
+    SEGUNDO.innerHTML = segundo;
+
+  let diaDaSemana = agora.getDay();
+  let dia = agora.getDate();
+  let mes = agora.getMonth();
+  let ano = agora.getFullYear();
+
+  let strDia = new String(dia);
+  
+  if (strDia.length == 1) {
+    dia = "0" + dia;
+  }
+  
+  switch(mes){
+    case 0: mes = 'janeiro'
+    break;
+    case 1: mes = 'fevereiro'
+    break;
+    case 2: mes = 'março'
+    break;
+    case 3: mes = 'abril'
+    break;
+    case 4: mes = 'maio'
+    break;
+    case 5: mes = 'junho'
+    break;
+    case 6: mes = 'julho'
+    break;
+    case 7: mes = 'agosto'
+    break;
+    case 8: mes = 'setembro'
+    break;
+    case 9: mes = 'outubro'
+    break;
+    case 10: mes = 'novembro'
+    break;
+    case 11: mes = 'dezembro'
+    break;
+  }
+
+  switch(diaDaSemana){
+    case 0: diaDaSemana = 'Domingo'
+    break;
+    case 1: diaDaSemana = 'Segunda-Feira'
+    break;
+    case 2: diaDaSemana = 'Terça-Feira'
+    break;
+    case 3: diaDaSemana = 'Quarta-Feira'
+    break;
+    case 4: diaDaSemana = 'Quinta-Feira'
+    break;
+    case 5: diaDaSemana = 'Sexta-Feira'
+    break;
+    case 6: diaDaSemana = 'Sábado'
+    break;
+  }
+
+  let dataAtual = `${diaDaSemana}, ${dia} de ${mes} de ${ano}`
+
+  DATA.innerHTML = dataAtual
+
+  },1000)
+}
+
+
 
 function game(){
   !gameOn;
@@ -22,6 +119,25 @@ function game(){
   const DINO = document.createElement('div');
   DINO.classList.add('dino');
   BACKGROUND.appendChild(DINO);
+
+  const RELOAD = document.createElement('button');
+  RELOAD.innerHTML = 'Restart';
+  RELOAD.classList.add('margG');
+  RELOAD.classList.add('paddP');
+  RELOAD.classList.add('flex');
+  RELOAD.classList.add('center');
+  MENU.appendChild(RELOAD);
+  MENU.classList.add('fullW');
+
+  const SCORE = document.createElement('h1');
+  SCORE.innerHTML = "Score " + points;
+  SCORE.classList.add('margG');
+  SCORE.classList.add('paddP');
+  SCORE.classList.add('flex');
+  SCORE.classList.add('center');
+  MENU.appendChild(SCORE);
+  
+  
   
   let isJumping = false;
   let positionU = 0;
@@ -68,10 +184,10 @@ function game(){
   }
 
   document.addEventListener('keydown', handleKeyUp);
-  BACKGROUND.addEventListener('click', jump)
+  BACKGROUND.addEventListener('click', jump);
+  RELOAD.addEventListener('click', reload)
 }
-
-
+  
 
 
 

@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
-<body>
+<body onload="Clock()">
     <div id="background" class="fullH fullW absolute sizeCover flex around">
 
       <div id="startScreen" class="flex vert center margP paddP">
@@ -24,11 +24,24 @@
         </div>
       </div>
 
-        <div id="menu" class="absolute flex around margP paddp">
-          <button id="nightBtn" class="margG paddP flex center" onclick="nightRun()">Night<br>Mode</button>
-          <button id="startBtn" class="margG paddP flex center" onclick="game()">Start</button>
+      <div id="menu" class="absolute flex around margP paddp">
+
+        <div id="clock" class="margG paddP flex center vert" >
+          <div>
+            <span id="hr"></span>:<span id="mn"></span>:<span id="sg"></span>
+          </div>
+          <span id="dt"></span>
         </div>
 
+        <button id="nightBtn" class="margG paddP flex center" onclick="nightRun()">Night<br>Mode</button>
+        
+        <button id="startBtn" class="margG paddP flex center" onclick="game()">Start</button>
+
+      
+
+      </div>
+
+      
     </div>
   
   <script src="scripts.js"></script>
