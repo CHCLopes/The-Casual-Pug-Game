@@ -80,7 +80,7 @@
 
 
   .dino{
-    width: 20vw;
+    width: 22vw;
     height: 12vh;
     animation: play2 .6s steps(6) infinite;
     -webkit-animation: play2 .6s steps(6) infinite;
