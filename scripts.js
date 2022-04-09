@@ -22,13 +22,61 @@ function game(){
   BACKGROUND.classList.add("backgroundAnimation");
 
   const DINO = document.createElement('div');
-  DINO.classList.add('animaDino');
   DINO.classList.add('dino');
   BACKGROUND.appendChild(DINO);
   
+  let isJumping = false;
+  let positionU = 0;
+  let positionF = 0;
   
+  function handleKeyUp (event){
+    if (event.keyCode === 32) {
+      if (!isJumping){
+        jump();
+      }
+    }
+  }
+
+  function jump() {
+    let upInterval = setInterval(() => {
+    
+      if (positionU >= 130) {
+        clearInterval(upInterval);
+        
+        let downInterval = setInterval(() => {
+          positionU -= 20;
+          
   
+          DINO.style.bottom = positionU + 'px';
+          DINO.style.left = positionF + 'px';
+  
+          if (positionU <= 0 ){
+            clearInterval(downInterval);
+          }
+        });
+      } 
+  
+      positionU += 20;
+      positionF += 20;
+  
+      DINO.style.bottom = positionU + 'px';
+      DINO.style.left = positionF + 'px';
+        
+      let dinoLeftInterval = setInterval(() => {
+        if(positionF <= 0){
+          clearInterval(dinoLeftInterval)
+        }
+        if(!isJumping){
+        positionF -= 0.6;
+        DINO.style.left = positionF + 'px';}
+      }, 20)
+            
+      }, 20)}
+
+      document.addEventListener('keydown', handleKeyUp);
 }
+
+
 
 /*
 

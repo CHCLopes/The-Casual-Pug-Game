@@ -56,6 +56,9 @@
 
 }
 
+/*----------------------------------------------------*/
+
+
 @media (max-height: 720px) and (orientation: portrait) {
 
   h1 {
@@ -76,8 +79,6 @@
   .backgroundAnimation{
     animation: slideright 2000s infinite linear;
   }
-
-
 
   .dino{
     width: 22vw;
