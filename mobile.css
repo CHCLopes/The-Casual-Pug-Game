@@ -16,7 +16,7 @@
   }
 
   .backgroundAnimation{
-    animation: slideright 500s infinite linear;
+    animation: slideright 50s infinite linear;
   }
 
 }
