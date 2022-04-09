@@ -77,6 +77,41 @@
     animation: slideright 2000s infinite linear;
   }
 
+
+  .dino{
+    width: 6.5vw;
+    height: 15vh;
+    animation: play2 .4s steps(6) infinite;
+    -webkit-animation: play2 .4s steps(6) infinite;
+    -moz-animation: play2 .4s steps(6) infinite;
+    -ms-animation: play2 .4s steps(6) infinite;
+    -o-animation: play2 .4s steps(6) infinite;
+    }
+    
+  @keyframes play2 {
+    from {background-position: -0vw;}
+    to {background-position: -40.1vw;}
+  }
+    
+  @-webkit-keyframes play2 {
+    from {background-position: -0vw;}
+    to {background-position: -40.1vw;}
+  }
+    
+  @-moz-keyframes play2 {
+    from {background-position: -0vw;}
+    to {background-position: -40.1vw;}
+  }
+    
+  @-ms-keyframes play2 {
+    from {background-position: -0vw;}
+    to {background-position: -40.1vw;}
+  }
+    
+  @-o-keyframes play2 {
+    from {background-position: -0vw;}
+    to {background-position: -40.1vw;}
+  }
 }
 
 
