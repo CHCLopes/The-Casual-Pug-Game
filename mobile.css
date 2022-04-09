@@ -91,7 +91,7 @@
     
   @keyframes play2 {
     from {background-position: 0vw;}
-    to {background-position: -135vw;}
+    to {background-position: -130vw;}
   }
     
   @-webkit-keyframes play2 {
