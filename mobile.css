@@ -82,11 +82,11 @@
   .dino{
     width: 17vw;
     height: 9vh;
-    animation: play2 1s steps(6) infinite;
-    -webkit-animation: play2 1s steps(6) infinite;
-    -moz-animation: play2 1s steps(6) infinite;
-    -ms-animation: play2 1s steps(6) infinite;
-    -o-animation: play2 1s steps(6) infinite;
+    animation: play2 .6s steps(6) infinite;
+    -webkit-animation: play2 .6s steps(6) infinite;
+    -moz-animation: play2 .6s steps(6) infinite;
+    -ms-animation: play2 .61s steps(6) infinite;
+    -o-animation: play2 .6s steps(6) infinite;
     }
     
   @keyframes play2 {
