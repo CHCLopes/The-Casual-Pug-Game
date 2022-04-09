@@ -81,11 +81,11 @@
   .dino{
     width: 9vw;
     height: 13vh;
-    animation: play2 .1s steps(1) infinite;
-    -webkit-animation: play2 .1s steps(1) infinite;
-    -moz-animation: play2 .1s steps(1) infinite;
-    -ms-animation: play2 .1s steps(1) infinite;
-    -o-animation: play2 .1s steps(1) infinite;
+    animation: play2 1s steps(2) infinite;
+    -webkit-animation: play2 1s steps(1) infinite;
+    -moz-animation: play2 1s steps(1) infinite;
+    -ms-animation: play2 1s steps(1) infinite;
+    -o-animation: play2 1s steps(1) infinite;
     }
     
   @keyframes play2 {
