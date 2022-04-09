@@ -1,8 +1,11 @@
 const BACKGROUND = document.getElementById('background');
 const MENU = document.getElementById('menu');
-const STARTSCREEN = document.getElementById('startScreen')
-const SCREENWIDTH = window.screen.width;
-const SCREENHEIGHT = window.screen.height;
+const STARTBTN = document.getElementById('startBtn');
+const STARTSCREEN = document.getElementById('startScreen');
+let createDino
+
+
+let gameOn = false;
 
 function nightRun(){
   BACKGROUND.classList.toggle("night");
@@ -12,15 +15,30 @@ function reload(){
   document.location.reload();
 }
 
+function game(){
+  !gameOn;
+  BACKGROUND.removeChild(STARTSCREEN);
+  MENU.removeChild(STARTBTN);
+  BACKGROUND.classList.add("backgroundAnimation");
+
+  const DINO = document.createElement('div');
+  DINO.classList.add('animaDino');
+  DINO.classList.add('dino');
+  BACKGROUND.appendChild(DINO);
+  
+  
+  
+}
+
 /*
-const DINO = document.querySelector('.dino');
+
 
 
 
 let SCORE = document.querySelector('.score');
 let points = 0;
 
-let gameOn = false;
+
 let isJumping = false;
 let positionU = 0;
 let positionF = 0;
