@@ -80,7 +80,7 @@
 
 
   .dino{
-    width: 15vw;
+    width: 20vw;
     height: 9vh;
     animation: play2 1s steps(6) infinite;
     -webkit-animation: play2 1s steps(6) infinite;
@@ -90,8 +90,8 @@
     }
     
   @keyframes play2 {
-    from {background-position: 2vw;}
-    to {background-position: -102vw;}
+    from {background-position: 0vw;}
+    to {background-position: 102vw;}
   }
     
   @-webkit-keyframes play2 {
