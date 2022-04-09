@@ -2,8 +2,6 @@ const BACKGROUND = document.getElementById('background');
 const MENU = document.getElementById('menu');
 const STARTBTN = document.getElementById('startBtn');
 const STARTSCREEN = document.getElementById('startScreen');
-let createDino
-
 
 let gameOn = false;
 
@@ -30,51 +28,50 @@ function game(){
   let positionF = 0;
   
   function handleKeyUp (event){
-    if (event.keyCode === 32) {
-      if (!isJumping){
+    if (event.keyCode === 32 || BACKGROUND.click) {
+      if (!isJumping && !gameOn){
         jump();
       }
     }
   }
 
-  function jump() {
-    let upInterval = setInterval(() => {
-    
+  function jump() {    
+
+    let upInterval = setInterval(() => {    
       if (positionU >= 130) {
-        clearInterval(upInterval);
-        
+        clearInterval(upInterval);        
         let downInterval = setInterval(() => {
-          positionU -= 20;
-          
-  
+          positionU -= 20;  
           DINO.style.bottom = positionU + 'px';
-          DINO.style.left = positionF + 'px';
-  
-          if (positionU <= 0 ){
+          DINO.style.left = positionF + 'px';  
+          if (positionU <= 3 ){
             clearInterval(downInterval);
           }
         });
       } 
   
       positionU += 20;
-      positionF += 20;
-  
+      positionF += 20;  
       DINO.style.bottom = positionU + 'px';
       DINO.style.left = positionF + 'px';
         
       let dinoLeftInterval = setInterval(() => {
-        if(positionF <= 0){
+        if(positionF <= 3){
           clearInterval(dinoLeftInterval)
         }
         if(!isJumping){
-        positionF -= 0.6;
-        DINO.style.left = positionF + 'px';}
-      }, 20)
-            
-      }, 20)}
+          positionF -= 0.6;
+          DINO.style.left = positionF + 'px';
+        }
+      }, 20)            
+    }, 20)
+  }
 
-      document.addEventListener('keydown', handleKeyUp);
+  document.addEventListener('keydown', handleKeyUp);
+  BACKGROUND.addEventListener('click', jump)
 }
+
+
 
 
 
