@@ -15,6 +15,10 @@
     font-size: .5em;
   }
 
+  .backgroundAnimation{
+    animation: slideright 500s infinite linear;
+  }
+
 }
 
 @media (max-height: 720px) and (orientation: portrait) {
