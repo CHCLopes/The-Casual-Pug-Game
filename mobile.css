@@ -21,7 +21,7 @@
 
   .dino{
     width: 6.1vw;
-    height: 15vh;
+    height: 6.1vh;
     animation: play2 .4s steps(6) infinite;
     -webkit-animation: play2 .4s steps(6) infinite;
     -moz-animation: play2 .4s steps(6) infinite;
