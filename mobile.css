@@ -38,6 +38,10 @@
     font-size: .5em;
   }
 
+  .backgroundAnimation{
+    animation: slideright 2000s infinite linear;
+  }
+
 }
 
 
