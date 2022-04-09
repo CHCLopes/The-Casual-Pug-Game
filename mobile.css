@@ -79,8 +79,8 @@
 
 
   .dino{
-    width: 12vw;
-    height: 10vh;
+    width: 6vw;
+    height: 5vh;
     animation: play2 1s steps(6) infinite;
     -webkit-animation: play2 1s steps(6) infinite;
     -moz-animation: play2 1s steps(6) infinite;
