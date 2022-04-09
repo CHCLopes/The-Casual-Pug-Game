@@ -36,22 +36,22 @@
     
   @-webkit-keyframes play2 {
     from {background-position: -0vw;}
-    to {background-position: -30.4vw;}
+    to {background-position: -40.1vw;}
   }
     
   @-moz-keyframes play2 {
     from {background-position: -0vw;}
-    to {background-position: -30.4vw;}
+    to {background-position: -40.1vw;}
   }
     
   @-ms-keyframes play2 {
     from {background-position: -0vw;}
-    to {background-position: -30.4vw;}
+    to {background-position: -40.1vw;}
   }
     
   @-o-keyframes play2 {
     from {background-position: -0vw;}
-    to {background-position: -30.4vw;}
+    to {background-position: -40.1vw;}
   }
 
 }
