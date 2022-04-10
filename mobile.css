@@ -78,11 +78,11 @@
 @media (max-height: 720px) and (orientation: portrait) {
 
   h1 {
-    font-size: 1em;
+    font-size: 2em;
   }
 
   h3 {
-    font-size: .7em;
+    font-size: .6em;
   }
 
   #clock{
