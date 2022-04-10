@@ -19,11 +19,16 @@
     align-items: center;
   }
 
-    button {
+  button {
     border: .5rem;
     width: auto;
     height: 15%;
     font-size: .7em;
+  }
+
+  #startScreen{
+    position: absolute;
+    bottom: 20px;
   }
 
   .backgroundAnimation{
