@@ -2,12 +2,7 @@ const BACKGROUND = document.getElementById('background');
 const CONTROLS = document.getElementById('controls');
 const STARTBTN = document.getElementById('startBtn');
 const STARTSCREEN = document.getElementById('startScreen');
-
-const CLOCK = document.getElementById('clock')
-const HORA = document.getElementById('hr');
-const MINUTO = document.getElementById('mn');
-const SEGUNDO = document.getElementById('sg');
-const DATA = document.getElementById('dt');
+const CLOCK = document.getElementById('clock');
 
 const MENU = document.getElementById('menu');
   if (window.screen.width < window.screen.height){
@@ -30,6 +25,13 @@ function reload(){
 }
 
 function Clock(){
+
+  const HORA = document.getElementById('hr');
+  const MINUTO = document.getElementById('mn');
+  const SEGUNDO = document.getElementById('sg');
+  const DATA = document.getElementById('dt');
+
+
   let clockInterval = setInterval(() =>{
     let agora = new Date();
 
