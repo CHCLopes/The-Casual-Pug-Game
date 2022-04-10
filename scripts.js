@@ -142,7 +142,7 @@ function game(){
   CONTROLS.appendChild(RELOAD);
   CONTROLS.classList.add('fullW');
 
-  const SCORE = document.createElement('h1');
+  const SCORE = document.createElement('h3');
   SCORE.innerHTML = "Score " + points;
   SCORE.classList.add('margG');
   SCORE.classList.add('paddP');
