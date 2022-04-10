@@ -8,6 +8,10 @@
     font-size: .5em;
   }
 
+  span {
+    font-size: 1em;
+  }
+
     button {
     border: .5rem;
     width: auto;
