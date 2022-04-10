@@ -139,6 +139,13 @@ function game(){
   SCORE.classList.add('center');
   CONTROLS.appendChild(SCORE);
   
+  const MENU = document.getElementById('menu');
+  if (window.screen.width < window.screen.height){
+    MENU.classList.remove('vert')
+    MENU.classList.add('hor')
+    CONTROLS.classList.remove('hor')
+    CONTROLS.classList.add('vert')
+  }
   
   
   let isJumping = false;
