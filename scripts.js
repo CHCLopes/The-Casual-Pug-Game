@@ -147,6 +147,13 @@ function game(){
   SCORE.classList.add('center');
   CONTROLS.appendChild(SCORE);
 
+  function score(){  
+    points += 1;
+    SCORE.innerHTML = "Score: " + points;
+  }
+
+  score();
+
   let isJumping = false;
   let positionU = 0;
   let positionF = 0;
@@ -191,6 +198,17 @@ function game(){
     }, 20)
   }
 
+  function createTumble () {
+      
+    const TUMBLE = document.createElement('div');
+    TUMBLE.classList.add('tumble');
+    TUMBLE.classList.add('margG');
+    TUMBLE.classList.add('paddG');
+    BACKGROUND.appendChild(TUMBLE);
+  }
+  
+  createTumble();
+
   document.addEventListener('keydown', handleKeyUp);
   BACKGROUND.addEventListener('click', jump);
   RELOAD.addEventListener('click', reload)
@@ -203,24 +221,6 @@ function game(){
 
 
 
-
-let SCORE = document.querySelector('.score');
-let points = 0;
-
-
-let isJumping = false;
-let positionU = 0;
-let positionF = 0;
-
-function gameStart(){
-  
-}
-
-
-function score(){  
-  points += 1;
-  SCORE.innerHTML = "Score: " + points;
-}
 
 function handleKeyUp (event){
   if (event.keyCode === 32) {
@@ -266,26 +266,26 @@ function jump() {
           
     }, 20)}
 /*
-    function createCactus () {
+    function createTUMBLE () {
       
-      const CACTUS = document.createElement('div');
-      let cactusPosition = 1500;
+      const TUMBLE = document.createElement('div');
+      let TUMBLEPosition = 1500;
       let randomTime = Math.random() * 4000;
     
 
-      CACTUS.classList.add('cactus');
-      CACTUS.style.left = 1000 + 'px';
-      BACKGROUND.appendChild(CACTUS);
+      TUMBLE.classList.add('TUMBLE');
+      TUMBLE.style.left = 1000 + 'px';
+      BACKGROUND.appendChild(TUMBLE);
 
       let leftInterval = setInterval(() => {
 
-        if (cactusPosition < -20){
+        if (TUMBLEPosition < -20){
           clearInterval(leftInterval);
-          BACKGROUND.removeChild(CACTUS);
+          BACKGROUND.removeChild(TUMBLE);
           score();
         } else if (
-          cactusPosition > 0 && 
-          cactusPosition < 60 &&
+          TUMBLEPosition > 0 && 
+          TUMBLEPosition < 60 &&
           positionF <= 20) {
           clearInterval(leftInterval);
           document.body.innerHTML = `
@@ -293,22 +293,22 @@ function jump() {
           <div class="restart button" onclick="reload()">RESTART</div>
           `;
           clearInterval(leftInterval);
-          BACKGROUND.removeChild(CACTUS);
+          BACKGROUND.removeChild(TUMBLE);
         }
         if (screenWidth > 900){
-          cactusPosition -= 5;
+          TUMBLEPosition -= 5;
         } else {
-          cactusPosition -= 10;
+          TUMBLEPosition -= 10;
         };
-        CACTUS.style.left = cactusPosition + 'px';
+        TUMBLE.style.left = TUMBLEPosition + 'px';
       }, 20)
       
 
-      setTimeout(createCactus, randomTime)
+      setTimeout(createTUMBLE, randomTime)
       
     }
 
-createCactus(); 
+createTUMBLE(); 
 
 
 
