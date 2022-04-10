@@ -1,4 +1,4 @@
-@media (max-width: 720px) and (orientation: landscape) {
+@media (max-height: 720px) and (orientation: landscape) {
 
   h1 {
     font-size: 1em;
@@ -21,8 +21,8 @@
 
   button {
     border: .5rem;
-    width: auto;
-    height: auto;
+    width: fit-content;
+    height: fit-content;
     font-size: .7em;
   }
 
@@ -75,7 +75,7 @@
 /*----------------------------------------------------*/
 
 
-@media (max-height: 720px) and (orientation: portrait) {
+@media (max-width: 720px) and (orientation: portrait) {
 
   h1 {
     font-size: 2em;
