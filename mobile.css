@@ -22,6 +22,8 @@
   .dino{
     width: 6.1vw;
     height: 15vh;
+  }
+    /*
     animation: play2 .4s steps(6) infinite;
     -webkit-animation: play2 .4s steps(6) infinite;
     -moz-animation: play2 .4s steps(6) infinite;
@@ -53,8 +55,9 @@
     from {background-position: -0vw;}
     to {background-position: -40.1vw;}
   }
-
+*/
 }
+
 
 /*----------------------------------------------------*/
 
@@ -83,6 +86,7 @@
   .dino{
     width: 22vw;
     height: 12vh;
+  }/*
     animation: play2 .6s steps(6) infinite;
     -webkit-animation: play2 .6s steps(6) infinite;
     -moz-animation: play2 .6s steps(6) infinite;
@@ -114,6 +118,7 @@
     from {background-position: -0vw;}
     to {background-position: -40.1vw;}
   }
+  */
 }
 
 
