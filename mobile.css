@@ -39,7 +39,7 @@
 
 /*----------------------------------------------------*/
 
-@media (max-width: 720px) and (orientation: portrait) {
+@media (max-width: 600px) and (orientation: portrait) {
 
   h1 {
     font-size: 1.5em;
