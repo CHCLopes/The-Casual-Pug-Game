@@ -9,6 +9,12 @@ const MINUTO = document.getElementById('mn');
 const SEGUNDO = document.getElementById('sg');
 const DATA = document.getElementById('dt');
 
+const MENU = document.getElementById('menu');
+  if (window.screen.width < window.screen.height){
+    MENU.classList.remove('vert')
+    MENU.classList.add('hor')
+  }
+
 let gameOn = false;
 let points = 0;
 
@@ -139,10 +145,8 @@ function game(){
   SCORE.classList.add('center');
   CONTROLS.appendChild(SCORE);
   
-  const MENU = document.getElementById('menu');
+  
   if (window.screen.width < window.screen.height){
-    MENU.classList.remove('vert')
-    MENU.classList.add('hor')
     CONTROLS.classList.remove('hor')
     CONTROLS.classList.add('vert')
   }
