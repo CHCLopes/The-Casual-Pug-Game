@@ -13,6 +13,7 @@ const MENU = document.getElementById('menu');
   if (window.screen.width < window.screen.height){
     MENU.classList.remove('vert')
     MENU.classList.add('hor')
+    MENU.classList.add('fullW')
   }
 
 let gameOn = false;
