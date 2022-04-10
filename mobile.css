@@ -88,6 +88,8 @@
   #clock{
     font-size: 1em;
     text-align: center;
+    border-bottom: none;
+    border-right: 1px black solid;
   }
 
   #hour{
