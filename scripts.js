@@ -116,9 +116,11 @@ function game(){
   MENU.removeChild(STARTBTN);
   BACKGROUND.classList.add("backgroundAnimation");
 
-  const DINO = document.createElement('div');
-  DINO.classList.add('dino');
-  BACKGROUND.appendChild(DINO);
+  const PUG = document.createElement('div');
+  PUG.classList.add('pug');
+  PUG.classList.add('margG');
+  PUG.classList.add('paddG');
+  BACKGROUND.appendChild(PUG);
 
   const RELOAD = document.createElement('button');
   RELOAD.innerHTML = 'Restart';
@@ -158,8 +160,8 @@ function game(){
         clearInterval(upInterval);        
         let downInterval = setInterval(() => {
           positionU -= 20;  
-          DINO.style.bottom = positionU + 'px';
-          DINO.style.left = positionF + 'px';  
+          PUG.style.bottom = positionU + 'px';
+          PUG.style.left = positionF + 'px';  
           if (positionU <= 3 ){
             clearInterval(downInterval);
           }
@@ -168,16 +170,16 @@ function game(){
   
       positionU += 20;
       positionF += 20;  
-      DINO.style.bottom = positionU + 'px';
-      DINO.style.left = positionF + 'px';
+      PUG.style.bottom = positionU + 'px';
+      PUG.style.left = positionF + 'px';
         
-      let dinoLeftInterval = setInterval(() => {
+      let PUGLeftInterval = setInterval(() => {
         if(positionF <= 3){
-          clearInterval(dinoLeftInterval)
+          clearInterval(PUGLeftInterval)
         }
         if(!isJumping){
           positionF -= 0.6;
-          DINO.style.left = positionF + 'px';
+          PUG.style.left = positionF + 'px';
         }
       }, 20)            
     }, 20)
@@ -232,8 +234,8 @@ function jump() {
         positionU -= 20;
         
 
-        DINO.style.bottom = positionU + 'px';
-        DINO.style.left = positionF + 'px';
+        PUG.style.bottom = positionU + 'px';
+        PUG.style.left = positionF + 'px';
 
         if (positionU <= 0 ){
           clearInterval(downInterval);
@@ -244,16 +246,16 @@ function jump() {
     positionU += 20;
     positionF += 20;
 
-    DINO.style.bottom = positionU + 'px';
-    DINO.style.left = positionF + 'px';
+    PUG.style.bottom = positionU + 'px';
+    PUG.style.left = positionF + 'px';
       
-    let dinoLeftInterval = setInterval(() => {
+    let PUGLeftInterval = setInterval(() => {
       if(positionF <= 0){
-        clearInterval(dinoLeftInterval)
+        clearInterval(PUGLeftInterval)
       }
       if(!isJumping){
       positionF -= 0.6;
-      DINO.style.left = positionF + 'px';}
+      PUG.style.left = positionF + 'px';}
     }, 20)
           
     }, 20)}
