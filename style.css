@@ -141,7 +141,11 @@ button {
   background-image:url(./imgs/pugRun.gif);
   position: absolute;
   bottom: .2vh;
-  left: .2vw;/*
+  left: .2vw;
+}
+
+  /*
+
   animation:play2 .4s steps(6) infinite;
   -webkit-animation: play2 .4s steps(6) infinite;
   -moz-animation: play2 .4s steps(6) infinite;
