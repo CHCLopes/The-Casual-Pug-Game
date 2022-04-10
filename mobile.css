@@ -85,8 +85,12 @@
     font-size: .7em;
   }
 
-  span{
+  #clock{
     font-size: .7em;
+    text-align: center;
+  }
+
+  #hour{
     display: flex;
     justify-content: center;
     align-items: center;

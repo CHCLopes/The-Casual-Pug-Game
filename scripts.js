@@ -14,6 +14,8 @@ const MENU = document.getElementById('menu');
     MENU.classList.remove('vert')
     MENU.classList.add('hor')
     MENU.classList.add('fullW')
+    CONTROLS.classList.remove('hor')
+    CONTROLS.classList.add('vert')
   }
 
 let gameOn = false;
@@ -145,14 +147,7 @@ function game(){
   SCORE.classList.add('flex');
   SCORE.classList.add('center');
   CONTROLS.appendChild(SCORE);
-  
-  
-  if (window.screen.width < window.screen.height){
-    CONTROLS.classList.remove('hor')
-    CONTROLS.classList.add('vert')
-  }
-  
-  
+
   let isJumping = false;
   let positionU = 0;
   let positionF = 0;
