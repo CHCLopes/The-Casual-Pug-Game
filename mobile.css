@@ -1,4 +1,4 @@
-@media (max-width: 700px) and (orientation: landscape) {
+@media (max-width: 720px) and (orientation: landscape) {
 
   h1 {
     font-size: 1em;
@@ -9,10 +9,10 @@
   }
 
     button {
-    border: .1rem;
+    border: .5rem;
     width: auto;
-    height: 15%;
-    font-size: .5em;
+    height: fit-content;
+    font-size: 1em;
   }
 
   .backgroundAnimation{
