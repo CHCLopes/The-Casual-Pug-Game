@@ -73,24 +73,33 @@
   }
 
   h3 {
-    font-size: .5em;
+    font-size: .7em;
+  }
+
+  span{
+    font-size: .7em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
     button {
-    border: .1rem;
+    border: .5rem;
     width: auto;
     height: 15%;
-    font-size: .5em;
+    font-size: .7em;
   }
 
   .backgroundAnimation{
     animation: slideright 2000s infinite linear;
   }
+  
 
+  /*
   .dino{
     width: 22vw;
     height: 12vh;
-  }/*
+  }
     animation: play2 .6s steps(6) infinite;
     -webkit-animation: play2 .6s steps(6) infinite;
     -moz-animation: play2 .6s steps(6) infinite;
