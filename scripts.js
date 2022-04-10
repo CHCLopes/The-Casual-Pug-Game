@@ -1,5 +1,5 @@
 const BACKGROUND = document.getElementById('background');
-const MENU = document.getElementById('menu');
+const CONTROLS = document.getElementById('controls');
 const STARTBTN = document.getElementById('startBtn');
 const STARTSCREEN = document.getElementById('startScreen');
 
@@ -113,7 +113,7 @@ function Clock(){
 function game(){
   !gameOn;
   BACKGROUND.removeChild(STARTSCREEN);
-  MENU.removeChild(STARTBTN);
+  CONTROLS.removeChild(STARTBTN);
   BACKGROUND.classList.add("backgroundAnimation");
 
   const PUG = document.createElement('div');
@@ -128,8 +128,8 @@ function game(){
   RELOAD.classList.add('paddP');
   RELOAD.classList.add('flex');
   RELOAD.classList.add('center');
-  MENU.appendChild(RELOAD);
-  MENU.classList.add('fullW');
+  CONTROLS.appendChild(RELOAD);
+  CONTROLS.classList.add('fullW');
 
   const SCORE = document.createElement('h1');
   SCORE.innerHTML = "Score " + points;
@@ -137,7 +137,7 @@ function game(){
   SCORE.classList.add('paddP');
   SCORE.classList.add('flex');
   SCORE.classList.add('center');
-  MENU.appendChild(SCORE);
+  CONTROLS.appendChild(SCORE);
   
   
   
