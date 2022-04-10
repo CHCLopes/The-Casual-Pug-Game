@@ -86,11 +86,12 @@
   }
 
   #clock{
-    font-size: .7em;
+    font-size: 1em;
     text-align: center;
   }
 
   #hour{
+    
     display: flex;
     justify-content: center;
     align-items: center;
