@@ -1,4 +1,5 @@
-@media (max-height: 720px) and (orientation: landscape) {
+
+@media (max-height: 600px) and (orientation: landscape) {
 
   h1 {
     font-size: 1em;
@@ -34,120 +35,43 @@
   .backgroundAnimation{
     animation: slideright 25s infinite linear;
   }
-
-  
-    /*
-    animation: play2 .4s steps(6) infinite;
-    -webkit-animation: play2 .4s steps(6) infinite;
-    -moz-animation: play2 .4s steps(6) infinite;
-    -ms-animation: play2 .4s steps(6) infinite;
-    -o-animation: play2 .4s steps(6) infinite;
-    }
-    
-  @keyframes play2 {
-    from {background-position: -0vw;}
-    to {background-position: -40.1vw;}
-  }
-    
-  @-webkit-keyframes play2 {
-    from {background-position: -0vw;}
-    to {background-position: -40.1vw;}
-  }
-    
-  @-moz-keyframes play2 {
-    from {background-position: -0vw;}
-    to {background-position: -40.1vw;}
-  }
-    
-  @-ms-keyframes play2 {
-    from {background-position: -0vw;}
-    to {background-position: -40.1vw;}
-  }
-    
-  @-o-keyframes play2 {
-    from {background-position: -0vw;}
-    to {background-position: -40.1vw;}
-  }
-*/
 }
 
-
 /*----------------------------------------------------*/
-
 
 @media (max-width: 720px) and (orientation: portrait) {
 
   h1 {
     font-size: 2em;
   }
-
+    
   h3 {
     font-size: .6em;
   }
-
-  #clock{
+    
+  #clock {
     font-size: 1em;
     text-align: center;
     border-bottom: none;
     border-right: 1px black solid;
   }
-
-  #hour{
     
+  #hour {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-
-    button {
+    
+  button {
     border: .5rem;
     width: auto;
     height: auto;
     font-size: .7em;
   }
-
-  .backgroundAnimation{
+    
+  .backgroundAnimation {
     animation: slideright 2000s infinite linear;
   }
-  
-
-  /*
-  .dino{
-    width: 22vw;
-    height: 12vh;
-  }
-    animation: play2 .6s steps(6) infinite;
-    -webkit-animation: play2 .6s steps(6) infinite;
-    -moz-animation: play2 .6s steps(6) infinite;
-    -ms-animation: play2 .61s steps(6) infinite;
-    -o-animation: play2 .6s steps(6) infinite;
-    }
-    
-  @keyframes play2 {
-    from {background-position: 0vw;}
-    to {background-position: -130vw;}
-  }
-    
-  @-webkit-keyframes play2 {
-    from {background-position: -0vw;}
-    to {background-position: -40.1vw;}
-  }
-    
-  @-moz-keyframes play2 {
-    from {background-position: -0vw;}
-    to {background-position: -40.1vw;}
-  }
-    
-  @-ms-keyframes play2 {
-    from {background-position: -0vw;}
-    to {background-position: -40.1vw;}
-  }
-    
-  @-o-keyframes play2 {
-    from {background-position: -0vw;}
-    to {background-position: -40.1vw;}
-  }
-  */
 }
 
 
