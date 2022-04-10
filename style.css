@@ -113,7 +113,10 @@ display: flex;
 #menu{
   background-color: lightgray;
   border-radius: .5rem;
-  
+}
+
+#clock{
+  border-bottom: black 1px solid;
 }
 
 h1 {
