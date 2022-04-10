@@ -136,7 +136,7 @@ button {
 
 .pug{
   width: 70px;
-  height:40px;
+  height: 40px;
   background-size: cover;
   background-image:url(./imgs/pugRun.gif);
   position: absolute;
