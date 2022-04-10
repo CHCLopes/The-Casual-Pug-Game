@@ -77,7 +77,7 @@ display: flex;
   background-size: cover;
 }
 
-.night{
+.night {
   filter: invert(100%);
 }
 

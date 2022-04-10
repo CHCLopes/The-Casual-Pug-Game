@@ -31,7 +31,6 @@ function Clock(){
   const SEGUNDO = document.getElementById('sg');
   const DATA = document.getElementById('dt');
 
-
   let clockInterval = setInterval(() =>{
     let agora = new Date();
 
@@ -119,8 +118,6 @@ function Clock(){
   },1000)
 }
 
-
-
 function game(){
   !gameOn;
   BACKGROUND.removeChild(STARTSCREEN);
@@ -132,7 +129,7 @@ function game(){
   PUG.classList.add('margG');
   PUG.classList.add('paddG');
   BACKGROUND.appendChild(PUG);
-
+  
   const RELOAD = document.createElement('button');
   RELOAD.innerHTML = 'Restart';
   RELOAD.classList.add('margG');
