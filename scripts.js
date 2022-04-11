@@ -1,9 +1,13 @@
+//TELA INICIAL
+
 const BACKGROUND = document.getElementById('background');
 const CONTROLS = document.getElementById('controls');
 const STARTBTN = document.getElementById('startBtn');
 const STARTSCREEN = document.getElementById('startScreen');
 const CLOCK = document.getElementById('clock');
 
+
+//RESPONSIVIDADE DO MENU (só funciona se o jogo estiver parado)
 const MENU = document.getElementById('menu');
   if (window.screen.width < window.screen.height){
     MENU.classList.remove('vert')
@@ -13,17 +17,23 @@ const MENU = document.getElementById('menu');
     CONTROLS.classList.add('vert')
   }
 
+
 let points = 0;
+
+//MODO ESCURO
 let night = false
 
 function nightRun(){
   BACKGROUND.classList.toggle("night");
 }
 
+//RECARREGAR A PÁGINA
 function reload(){
   document.location.reload();
 }
 
+
+//RELÓGIO E DATA
 function Clock(){
 
   const HORA = document.getElementById('hr');
@@ -118,18 +128,23 @@ function Clock(){
   },1000)
 }
 
+//JOGO
 function game(){
-  
+  //RETIRANDO ITENS MOMENTANEAMENTE DESNECESSÁRIOS
   BACKGROUND.removeChild(STARTSCREEN);
   CONTROLS.removeChild(STARTBTN);
+
+  //ANIMAÇÃO DO CENÁRIO
   BACKGROUND.classList.add("backgroundAnimation");
 
+  //CRIAÇÃO DA PERSONAGEM
   const PUG = document.createElement('div');
   PUG.classList.add('pug');
   PUG.classList.add('margG');
   PUG.classList.add('paddG');
   BACKGROUND.appendChild(PUG);
   
+  //CRIAÇÃO DO BOTÃO DE RECARREGAR A PÁGINA
   const RELOAD = document.createElement('button');
   RELOAD.innerHTML = 'Restart';
   RELOAD.classList.add('margG');
@@ -139,6 +154,7 @@ function game(){
   CONTROLS.appendChild(RELOAD);
   CONTROLS.classList.add('fullW');
 
+  //CRIAÇÃO DO PLACAR
   const SCORE = document.createElement('h3');
   SCORE.innerHTML = 'Score ' + points;
   SCORE.classList.add('margG');
@@ -152,10 +168,14 @@ function game(){
     SCORE.innerHTML = "Score: " + points;
   }
 
+  //CONTROLE DO PULO
   let isJumping = false;
+  //POSIÇÃO VERTICAL NA TELA DA PERSONAGEM
   let positionU = 0;
+  //POSIÇÃO HORIZONTAL NA TELA DA PERSONAGEM
   let positionF = 0;
-  
+
+  //CAPTURA E CONFIGURAÇÃO DA TECLA BARRA DE ESPAÇO E DO CLICK NO CENARIO PARA MOVIMENTAR A PERSONAGEM 
   function handleKeyUp (event){
     if (event.keyCode === 32 || BACKGROUND.click) {
       if (!isJumping){
@@ -164,10 +184,13 @@ function game(){
     }
   }
 
+  //FUNÇÃO DA MOVIMENTAÇÃO DA PERSONAGEM. NESTE CASO, SOMENTE PULO.
   function jump() {    
 
+    //FUNÇÃO setInterval PARA MONITORAR E/OU REPETIR O COMANDO A PERSONAGEM
     let upInterval = setInterval(() => {    
       if (positionU >= 130) {
+        //FUNÇÃO clearInterval PARA TRAZER A PERSONAGEM DE VOLTA AO ESTADO INICIAL
         clearInterval(upInterval);        
         let downInterval = setInterval(() => {
           positionU -= 20;  
@@ -178,7 +201,10 @@ function game(){
           }
         });
       } 
+
+      //PERSONAGEM SUBINDO SE O COMANDO FOR DADO
       positionU += 20;
+      //PERSONAGEM INDO PARA A ESQUERDA SE O COMANDO FOR DADO
       positionF += 20;  
       PUG.style.bottom = positionU + 'px';
       PUG.style.left = positionF + 'px';
@@ -187,6 +213,7 @@ function game(){
         if(positionF <= 3){
           clearInterval(PUGLeftInterval)
         }
+        //PERSONAGEM VOLTANDO AO ESTADO INICIAL
         if(!isJumping){
           positionF -= 0.6;
           PUG.style.left = positionF + 'px';
@@ -195,32 +222,44 @@ function game(){
     }, 20)
   }
 
+
   createTumble();
 
+  //CRIANDO UM OBSTÁCULO
   function createTumble () {
-      
+
+    //QUANTIDADE ALEATÓRIA DE TEMPO
+    let randomTime = Math.random() * 4000;  
+    
+    //OBSTÁCULO
     const TUMBLE = document.createElement('div');
     let tumblePosition = 1500;
-    let randomTime = Math.random() * 4000;  
-
     TUMBLE.classList.add('tumble');
     TUMBLE.style.left = 1000 + 'px';
     BACKGROUND.appendChild(TUMBLE);
 
+    //CRIAÇÃO REPETITIVA E ALEATÓRIA DE OBSTÁCULO
     let leftInterval = setInterval(() => {
 
+      //PONTUAÇÃO CASO SE CONSIGA DESVIAR DO OBSTÁCULO
       if (tumblePosition < -20){
         clearInterval(leftInterval);
         BACKGROUND.removeChild(TUMBLE);
         score();
-      } else if (
+      } 
+      //FIM DE JOGO EM CASO DE COLISÃO DA PERSONAGEM COM O OBSTÁCULO
+      else if (
+
+        //DEFININDO A COLISÃO
         tumblePosition > 0 && 
         tumblePosition < 60 &&
         positionF <= 20) {
+
+          //RETIRANDO OS ELEMENTOS DA TELA E ACRESCENTANDO A TELA DE FIM DE JOGO
           clearInterval(leftInterval);
           BACKGROUND.classList.remove("backgroundAnimation")
-          document.body.classList.add("center")
-          document.body.classList.add("flex")
+          
+          //CRIANDO O BOTÃO DE REINICIAR O JOGO E MOSTRANDO A PONTUAÇÃO FINAL
           document.body.innerHTML = `
           <div id="gameOver" class="margG paddG flex centerSelf center vert">
             <h1>Game Over!</h1>
@@ -229,14 +268,22 @@ function game(){
           </div>
           `;
       }
+      //MOVIMENTANDO O OBSTÁCULO
       tumblePosition -= 5;
       TUMBLE.style.left = tumblePosition + 'px';
     }, 20)   
 
+    //REPETINDO A CRIAÇÃO DO OBSTÁCULO EM INTERVALOS DE TEMPO ALEATÓRIOS
     setTimeout(createTumble, randomTime)
     
   }
+
+  //MONITORANDO O EVENTO DE USAR A BARRA DE ESPAÇO PARA MOVIMENTAR A PERSONAGEM
   document.addEventListener('keydown', handleKeyUp);
+
+  //MONITORANDO O EVENTO DE CLIQUE NO CENÁRIO PARA MOVIMENTAR A PERSONAGEM
   BACKGROUND.addEventListener('click', jump);
+
+  //MONITORANDO O EVENTO DE CLIQUE BOTÃO RELOAD PARA MOVIMENTAR A PERSONAGEM
   RELOAD.addEventListener('click', reload)
 }
