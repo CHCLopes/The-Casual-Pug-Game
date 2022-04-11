@@ -3,14 +3,7 @@ font-family: 'Press Start 2P', cursive;
 display: flex;
 }
 
-.fullScreenW{
-  width: 100vw;
-}
-
-.fullScreenH{
-  height: 100vh;
-}
-
+/*CLASSES REUTILIZÁVEIS*/
 .fullW{
   width:100%;
 }
@@ -35,10 +28,6 @@ display: flex;
   padding: .5rem;
 }
 
-.paddM{
-  padding: .3rem;
-}
-
 .paddP{
   padding: .1rem;
 }
@@ -56,10 +45,6 @@ display: flex;
 .centerSelf{
   justify-self: center;
   align-self: center;
-}
-
-.between{
-  justify-content: space-between;
 }
 
 .around{
@@ -82,20 +67,11 @@ display: flex;
   background-size: cover;
 }
 
-
 .night {
   filter: invert(100%);
 }
 
-
-.rowReverse{
-  flex-direction: row-reverse;
-}
-
-.columnReverse{
-  flex-direction: column-reverse;
-}
-
+/* CLASSES ESPECÍFICAS */
 body {
   background-image: url('./imgs/background.png');
   background-repeat: no-repeat;
