@@ -13,10 +13,8 @@ const MENU = document.getElementById('menu');
     CONTROLS.classList.add('vert')
   }
 
-let gameOn = false;
 let points = 0;
 let night = false
-
 
 function nightRun(){
   BACKGROUND.classList.toggle("night");
@@ -121,7 +119,7 @@ function Clock(){
 }
 
 function game(){
-  !gameOn;
+  
   BACKGROUND.removeChild(STARTSCREEN);
   CONTROLS.removeChild(STARTBTN);
   BACKGROUND.classList.add("backgroundAnimation");
