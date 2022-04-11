@@ -1,4 +1,4 @@
-
+/*RESPONSIVIDADE SMARPHONES COM A ORIENTAÇÃO EM PAISAGEM*/
 @media (max-height: 600px) and (orientation: landscape) {
 
   h1 {
@@ -37,8 +37,7 @@
   }
 }
 
-/*----------------------------------------------------*/
-
+/*RESPONSIVIDADE SMARPHONES COM A ORIENTAÇÃO EM RETRATO*/
 @media (max-width: 600px) and (orientation: portrait) {
 
   h1 {
