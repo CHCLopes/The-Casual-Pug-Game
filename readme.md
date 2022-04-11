@@ -1,4 +1,4 @@
-### Refatorando e personalizando o Jogo do Dinossauro do Chrome sem internet
+### Refatorando e personalizando e implementando a responsividade no Jogo do Dinossauro do Chrome sem internet
 
 # The Casual Pug Game
 
@@ -6,13 +6,15 @@
 ### Bootcamp "Philips Fullstack Developer | You Are You"
 ### Digital Innovation One
 
+## SITE TOTALMENTE RESPONSIVO
+
 ![PugGame](./imgs/pugRun.gif)
 
 ![Print](./imgs/PrintScreen.png)
 
 ![PugGame](./imgs/pugRun.gif)
 
-Refatorando e personalizando o projeto ["Recriando o famoso jogo do dinossauro sem internet"](https://web.dio.me/project/recriando-o-famoso-jogo-do-dinossauro-sem-internet/learning/6e0ce884-2c7c-4d61-b2a4-28a0d48d279a?back=/track/philips-fullstack-developer&tab=undefined) do Bootcamp ["Philips Fullstack Developer | You Are You"](https://web.dio.me/track/5c0a81e0-3566-4314-8075-298147b2858d) da DIO.
+Refatorando, personalizando e implementando a responsividade total no projeto ["Recriando o famoso jogo do dinossauro sem internet"](https://web.dio.me/project/recriando-o-famoso-jogo-do-dinossauro-sem-internet/learning/6e0ce884-2c7c-4d61-b2a4-28a0d48d279a?back=/track/philips-fullstack-developer&tab=undefined) do Bootcamp ["Philips Fullstack Developer | You Are You"](https://web.dio.me/track/5c0a81e0-3566-4314-8075-298147b2858d) da DIO. PODE SER UTILIZADO EM SMARTPHONES NÃO IMPORTA A ORIENTAÇÃO.
 
 Sites ferramentas:
 - [icon archive](https://iconarchive.com/) "favicon"
@@ -22,6 +24,7 @@ Sites ferramentas:
 - [google](google.com) "pesquisa"
 - [stackoverflow](https://pt.stackoverflow.com/) "pesquisa"
 - [online image editor](https://www.online-image-editor.com/?language=portuguese) "edição das imagens"
+- [gifer](https://gifer.com/pt) "imagens .gif"
 
 Site Hospedado do Projeto Personalizado: [The Casual Pug Game](https://sk8dinogame2.netlify.app/)
 
