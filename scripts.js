@@ -15,6 +15,8 @@ const MENU = document.getElementById('menu');
 
 let gameOn = false;
 let points = 0;
+let night = false
+
 
 function nightRun(){
   BACKGROUND.classList.toggle("night");
@@ -140,7 +142,7 @@ function game(){
   CONTROLS.classList.add('fullW');
 
   const SCORE = document.createElement('h3');
-  SCORE.innerHTML = "Score " + points;
+  SCORE.innerHTML = 'Score ' + points;
   SCORE.classList.add('margG');
   SCORE.classList.add('paddP');
   SCORE.classList.add('flex');
@@ -151,8 +153,6 @@ function game(){
     points += 1;
     SCORE.innerHTML = "Score: " + points;
   }
-
-  score();
 
   let isJumping = false;
   let positionU = 0;
@@ -198,119 +198,49 @@ function game(){
     }, 20)
   }
 
-  function createTumble () {
-      
-    const TUMBLE = document.createElement('div');
-    TUMBLE.classList.add('tumble');
-    TUMBLE.classList.add('margG');
-    TUMBLE.classList.add('paddG');
-    BACKGROUND.appendChild(TUMBLE);
-  }
-  
-  createTumble();
+  createCactus();
 
+  function createCactus () {
+      
+    const CACTUS = document.createElement('div');
+    let cactusPosition = 1500;
+    let randomTime = Math.random() * 4000;  
+
+    CACTUS.classList.add('cactus');
+    CACTUS.style.left = 1000 + 'px';
+    BACKGROUND.appendChild(CACTUS);
+
+    let leftInterval = setInterval(() => {
+
+      if (cactusPosition < -20){
+        clearInterval(leftInterval);
+        BACKGROUND.removeChild(CACTUS);
+        score();
+      } else if (
+        cactusPosition > 0 && 
+        cactusPosition < 60 &&
+        positionF <= 20) {
+          !gameOn;
+          clearInterval(leftInterval);
+          BACKGROUND.classList.remove("backgroundAnimation")
+          document.body.classList.add("center")
+          document.body.classList.add("flex")
+          document.body.innerHTML = `
+          <div id="gameOver" class="margG paddG flex centerSelf center vert">
+            <h1>Game Over!</h1>
+            <h3">Score: ${points} points</h3>
+            <button id="reload" class="margG paddG flex centerSelf center " onclick="reload()">RESTART</button>
+          </div>
+          `;
+      }
+      cactusPosition -= 5;
+      CACTUS.style.left = cactusPosition + 'px';
+    }, 20)   
+
+    setTimeout(createCactus, randomTime)
+    
+  }
   document.addEventListener('keydown', handleKeyUp);
   BACKGROUND.addEventListener('click', jump);
   RELOAD.addEventListener('click', reload)
 }
-  
-
-
-
-/*
-
-
-
-
-function handleKeyUp (event){
-  if (event.keyCode === 32) {
-    if (!isJumping){
-      jump();
-    }
-  }
-}
-
-function jump() {
-  let upInterval = setInterval(() => {
-  
-    if (positionU >= 130) {
-      clearInterval(upInterval);
-      
-      let downInterval = setInterval(() => {
-        positionU -= 20;
-        
-
-        PUG.style.bottom = positionU + 'px';
-        PUG.style.left = positionF + 'px';
-
-        if (positionU <= 0 ){
-          clearInterval(downInterval);
-        }
-      });
-    } 
-
-    positionU += 20;
-    positionF += 20;
-
-    PUG.style.bottom = positionU + 'px';
-    PUG.style.left = positionF + 'px';
-      
-    let PUGLeftInterval = setInterval(() => {
-      if(positionF <= 0){
-        clearInterval(PUGLeftInterval)
-      }
-      if(!isJumping){
-      positionF -= 0.6;
-      PUG.style.left = positionF + 'px';}
-    }, 20)
-          
-    }, 20)}
-/*
-    function createTUMBLE () {
-      
-      const TUMBLE = document.createElement('div');
-      let TUMBLEPosition = 1500;
-      let randomTime = Math.random() * 4000;
-    
-
-      TUMBLE.classList.add('TUMBLE');
-      TUMBLE.style.left = 1000 + 'px';
-      BACKGROUND.appendChild(TUMBLE);
-
-      let leftInterval = setInterval(() => {
-
-        if (TUMBLEPosition < -20){
-          clearInterval(leftInterval);
-          BACKGROUND.removeChild(TUMBLE);
-          score();
-        } else if (
-          TUMBLEPosition > 0 && 
-          TUMBLEPosition < 60 &&
-          positionF <= 20) {
-          clearInterval(leftInterval);
-          document.body.innerHTML = `
-          <h1 class="lastScore gameOver">Game Over!<br><br><br>Score: ${points} points<br><br></h1>
-          <div class="restart button" onclick="reload()">RESTART</div>
-          `;
-          clearInterval(leftInterval);
-          BACKGROUND.removeChild(TUMBLE);
-        }
-        if (screenWidth > 900){
-          TUMBLEPosition -= 5;
-        } else {
-          TUMBLEPosition -= 10;
-        };
-        TUMBLE.style.left = TUMBLEPosition + 'px';
-      }, 20)
-      
-
-      setTimeout(createTUMBLE, randomTime)
-      
-    }
-
-createTUMBLE(); 
-
-
-
-document.addEventListener('keydown', handleKeyUp);
-*/
