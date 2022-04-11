@@ -158,7 +158,7 @@ function game(){
   
   function handleKeyUp (event){
     if (event.keyCode === 32 || BACKGROUND.click) {
-      if (!isJumping && !gameOn){
+      if (!isJumping){
         jump();
       }
     }
@@ -178,7 +178,6 @@ function game(){
           }
         });
       } 
-  
       positionU += 20;
       positionF += 20;  
       PUG.style.bottom = positionU + 'px';
@@ -196,29 +195,28 @@ function game(){
     }, 20)
   }
 
-  createCactus();
+  createTumble();
 
-  function createCactus () {
+  function createTumble () {
       
-    const CACTUS = document.createElement('div');
-    let cactusPosition = 1500;
+    const TUMBLE = document.createElement('div');
+    let tumblePosition = 1500;
     let randomTime = Math.random() * 4000;  
 
-    CACTUS.classList.add('cactus');
-    CACTUS.style.left = 1000 + 'px';
-    BACKGROUND.appendChild(CACTUS);
+    TUMBLE.classList.add('tumble');
+    TUMBLE.style.left = 1000 + 'px';
+    BACKGROUND.appendChild(TUMBLE);
 
     let leftInterval = setInterval(() => {
 
-      if (cactusPosition < -20){
+      if (tumblePosition < -20){
         clearInterval(leftInterval);
-        BACKGROUND.removeChild(CACTUS);
+        BACKGROUND.removeChild(TUMBLE);
         score();
       } else if (
-        cactusPosition > 0 && 
-        cactusPosition < 60 &&
+        tumblePosition > 0 && 
+        tumblePosition < 60 &&
         positionF <= 20) {
-          !gameOn;
           clearInterval(leftInterval);
           BACKGROUND.classList.remove("backgroundAnimation")
           document.body.classList.add("center")
@@ -231,11 +229,11 @@ function game(){
           </div>
           `;
       }
-      cactusPosition -= 5;
-      CACTUS.style.left = cactusPosition + 'px';
+      tumblePosition -= 5;
+      TUMBLE.style.left = tumblePosition + 'px';
     }, 20)   
 
-    setTimeout(createCactus, randomTime)
+    setTimeout(createTumble, randomTime)
     
   }
   document.addEventListener('keydown', handleKeyUp);
