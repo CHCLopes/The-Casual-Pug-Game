@@ -1,4 +1,4 @@
-### Refatorando, personalizando e implementando a responsividade no Jogo do Dinossauro do Chrome sem internet
+### Refatorando, personalizando e implementando a responsividade no Jogo do Dinossauro do Chrome sem internet.
 
 # The Casual Pug Game
 
